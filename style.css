@@ -13,7 +13,9 @@ body {
   height: 100vh;
   margin: auto;
   display: grid;
-  grid-template-areas: "timA bg timB";
+  grid-template-areas:
+    "timA bg timB"
+    "icon icon icon";
   grid-template-columns: 300px auto 300px;
   grid-template-rows: 1fr;
   display: none;
@@ -227,11 +229,23 @@ button {
   display: none;
 }
 
+#icon {
+  grid-area: icon;
+  width: 100%;
+  font-size: 20px;
+  align-items: flex-start;
+  gap: 30px;
+  justify-content: center;
+  display: flex;
+  margin-top: -50px;
+}
+
 @media (max-width: 578px) {
   .container {
     grid-template-areas:
       "bg bg"
-      "timA timB";
+      "timA timB"
+      "icon icon";
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1.5fr;
   }
